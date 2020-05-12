@@ -135,14 +135,14 @@ body{
 }
 
 
-h2{
+h3{
   font-size: 2.4rem;
 }
 
 .seccion p{
   font-size: 1.4rem;
 }
-section.seccion h2::after{
+h3::after{
   content: '';
   margin: 1rem auto;
   background: url(../img/separador.png) no-repeat;
@@ -420,6 +420,129 @@ p.slogan span{
 .menu-movil:hover span{
   background:var(--secundario);
   box-shadow: 1px 1px 5px black;
+}
+
+
+/* PROGRAMA DEL EVENTO */
+
+.programa{
+  position: relative;
+}
+
+.contenedor-video{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.contenido-programa{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.programa-evento{
+  background: rgba(255, 255, 255, .7);
+  padding: 20px;
+  padding-bottom: 40px;
+  margin-top: 80px;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .programa-evento{
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .programa-evento{
+    width: 55%;
+  }
+}
+
+.menu-programa{
+  width: 100%;
+  font-family: var(--font2);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--secundario);
+}
+
+@media (min-width: 768px) {
+  .menu-programa{
+    display: flex;
+  }
+}
+
+.menu-programa a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--oscuro);
+  padding-bottom: 5px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+}
+@media (min-width: 768px) {
+  .menu-programa a{
+    flex: 0 0 33.3%;
+  }
+}
+.menu-programa a:hover,
+.menu-programa a i,
+.detalle-evento i,
+.detalle-evento h2{
+  color: var(--secundario);
+  text-shadow: .5px .5px 0px rgb(124, 124, 124);
+}
+
+
+/* detalle evento */
+
+.detalle-evento{
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--secundario);
+}
+
+div.detalle-evento:nth-child(2){
+  border-bottom: none;
+}
+
+.detalle-evento p{
+  padding: 0 20px;
+}
+
+.boton-flex{
+  display: flex;
+  justify-content: flex-end;
+}
+
+a.button{
+  border: 2px solid var(--secundario);
+  margin-top: 40px;
+  padding: 7px 1.5rem;
+  transition: 0.3s ease-in-out;
+  border-radius: 0.3rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--oscuro);
+  text-transform: uppercase;
+}
+
+.button span{
+  border-bottom: 1px solid var(--secundario);
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover{
+  text-shadow: .5px .5px 0px rgb(124, 124, 124);
+  background: var(--secundario);
+  color: #fff;
+}
+.button:hover span{
+  border-bottom: 1px solid var(--oscuro);
 }
 
 /* ==========================================================================
