@@ -433,7 +433,17 @@ p.slogan span{
   max-width: 100%;
   overflow-x: hidden;
 }
+@media (min-width: 480px) {
+  .contenedor-video{
+    overflow-y: hidden;
+  }
+}
 
+@media (min-width: 768px) {
+  .contenedor-video{
+    max-height: 940px;
+  }
+}
 .contenido-programa{
   position: absolute;
   top: 0;
@@ -529,6 +539,7 @@ a.button{
   text-decoration: none;
   color: var(--oscuro);
   text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .button span{
@@ -544,6 +555,78 @@ a.button{
 .button:hover span{
   border-bottom: 1px solid var(--oscuro);
 }
+/* SECCION INVITADOS */
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+ul.lista-invitados li{
+  margin: 10px auto;
+}
+
+@media (min-width: 700px) {
+  ul.lista-invitados li{
+    width: calc(50% - 1rem);
+    margin: 0.5rem;
+    float: left;
+  }
+}
+
+@media (min-width: 950px) {
+  ul.lista-invitados li{
+    width: calc(33.3% - 2.4rem);
+    margin: 1rem;
+  }
+}
+
+.invitado{
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font2);
+}
+
+.invitado img{
+  max-width: 100%;
+  width: 100%;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  transition: 0.5s ease-in-out;
+}
+
+.invitado:hover img{
+  filter: none;
+  -webkit-filter: grayscale(0);
+  scale: 1.1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.invitado p{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px 10px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.555);
+  color: var(--secundario);
+  text-shadow: 1px 0px 2px grey;
+  transition: 0.5s ease-in-out;
+}
+
+.invitado:hover p{
+  bottom:-80px;
+  opacity: 0;
+}
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
