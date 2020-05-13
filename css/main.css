@@ -625,6 +625,66 @@ ul.lista-invitados li{
 
 
 
+/* CONTADOR */
+
+ul.resumen-evento{
+  position: relative;
+  padding: 120px 0;
+}
+
+ul.resumen-evento li{
+  width: 50%;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: var(--font2);
+  font-weight: 900;
+  font-size: 24px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.numero{
+  color: var(--secundario);
+  font-size: 60px;
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+@media (min-width: 768px) {
+  ul.resumen-evento li{
+    width: 25%;
+  }
+}
+
+.parallax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(.25rem);
+}
+.contador{
+  position: relative;
+  height: auto;
+}
+
+.contador::before{
+  content: '';
+  background: url(../img/bg-resumen2.jpg) center center fixed;
+}
+
+
+
+
+
+
+
+
+
 
 
 
